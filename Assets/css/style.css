@@ -8,7 +8,7 @@
     font-size: 25px;
 }
 
-.btn {
+/* .btn {
     line-height: 2.5;
     padding: 0 20px;
     font-size: 1rem;
@@ -17,15 +17,13 @@
     text-shadow: 1px 1px 1px #000;
     border-radius: 10px;
     background-color: lightblue;
-}
+} */
 #container {
-    /* line-height: 2.5; */
-    /* padding: 0px 50px; */
     font-size: 1rem;
     text-align: center;
     color: black;
     border-radius: 10px;
-    margin-left: 180px;
+    /* margin-left: 180px; */
     
     
     
@@ -43,50 +41,13 @@
     
 
 }
-.card-list-three {
-    float: left ;
-    width:20%;
-    border-radius: 10px;
-    background-color: grey;
-    color: white;
-    text-align: left;
-    height: 40%
-    
 
-}
+ #Weather {
+    margin-left: 350px;
+    margin-top: -150px;
+ }
 
-.card-list-four{
-    float:right ;
-    width:20%;
-    border-radius: 10px;
-    background-color: grey;
-    color: white;
-    text-align: left;
-    height: 40%
-    
-
-}
-
-.card-list-five {
-    float: right ;
-    width:20%;
-    border-radius: 10px;
-    background-color: grey;
-    color: white;
-    text-align: left;
-    height: 40%
-    
-}
-
-.card-list-six {
-    float: right ;
-    width:20%;
-    border-radius: 10px;
-    background-color: grey;
-    color: white;
-    text-align: left;
-    height: 80%
-   
-
-}
-
+ 
+ 
+ 
+ 

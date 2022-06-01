@@ -5,46 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "Assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>Weather Dashboard</title>
 </head>
 <body>
     <main>
         <h1 class = "head">Weather Dashboard</h1>
-            <form id="city-input" class="city-body">
+            <div class="city-body col-md-3" id = "content-left">
               <label class="form-label" for="City">Search a City: </label><br><br>
               <input type="text" id="input" name="input"><br><br>
-              <button type = "btn" class = "btn">Search </button>
-            </form>
-            <div id = "container">
-            <div id = "card" class = "card-list">
-                <h2>5 day Forcast:</h2>
+              <button type = "btn" class = "btn" id = "city-input">Search </button>
             </div>
-            <div id = "card-two" class = "card-list-two">
+            <div id = "Weather" class="col-md-6">
+                <div class="row ml-4 border border-dark rounded ">
+                    <div class="col-sm-12" id="current-weather">
+                        <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                        
+                        <p class="card-subtitle mb-2 text-muted">Temperature: <span id="temperature"></span>
+                        </p>
+                        <p class="card-subtitle mb-2 text-muted">Humidity: <span id="humidity"></span>
+                        </p>
+                        <p class="card-subtitle mb-2 text-muted">Wind Speed: <span id="wind-speed"></span>
+                        </p>
+                        <p class="card-subtitle mb-2 text-muted">UV index: <span id="uv-index"></span>
+                        </p>
+                       
+                    </div>
+                </div>
+                <!-- <div id = "current-date"></div> -->
+                <div id = "search"></div>
+            <div id = "container">
+                
+            <div id = "content-right" class = "card-list col-md-9 pt-4">
+                <h2>5-day Forecast:</h2>
+            <div class="row text-light">
+            <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                <p id = "Day1"></p>
                 <p id = "temp">Temp: </p>
                 <p id = "Wind">Wind: </p>
                 <p id = "Humidity">Humidity: </p>
             </div>
-            <div id = "card-three" class = "card-list-three">
+            <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                <p id = "Day2"></p>
                 <p id = "temp1">Temp: </p>
+                <p id = "Wind1">Wind: </p>
+                <p id = "Humidity1">Humidity: </p>
+            </div>
+            <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                <p id = "Day3"></p>
+                <p id = "temp2">Temp: </p>
                 <p id = "Wind2">Wind: </p>
+                <p id = "Humidity2">Humidity: </p>
+            </div>
+            <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                <p id = "Day4"></p>
+                <p id = "temp3">Temp: </p>
+                <p id = "Wind3">Wind: </p>
                 <p id = "Humidity3">Humidity: </p>
             </div>
-            <div id = "card-four" class = "card-list-four">
+            <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                <p id = "Day5"></p>
                 <p id = "temp4">Temp: </p>
-                <p id = "Wind5">Wind: </p>
-                <p id = "Humidity6">Humidity: </p>
+                <p id = "Wind4">Wind: </p>
+                <p id = "Humidity4">Humidity: </p>
             </div>
-            <div id = "card-five" class = "card-list-five">
-                <p id = "temp7">Temp: </p>
-                <p id = "Wind8">Wind: </p>
-                <p id = "Humidity9">Humidity: </p>
             </div>
-            <div id = "card-six" class = "card-list-six">
-                <p id = "temp10">Temp: </p>
-                <p id = "Wind11">Wind: </p>
-                <p id = "Humidity12">Humidity: </p>
             </div>
+
+            
     </main>
 </body>
 <script src = "Assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 </html>
