@@ -8,25 +8,13 @@
     font-size: 25px;
 }
 
-/* .btn {
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: black;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: lightblue;
-} */
+
 #container {
     font-size: 1rem;
     text-align: center;
     color: black;
     border-radius: 10px;
-    /* margin-left: 180px; */
-    
-    
-    
+       
 }
 .card-list-two {
 
@@ -37,9 +25,6 @@
     float: left ;
     width:20%;
     height: 40%
-    
-    
-
 }
 
  #Weather {
@@ -47,7 +32,7 @@
     margin-top: -150px;
  }
 
- 
+
  
  
  

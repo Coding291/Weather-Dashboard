@@ -12,11 +12,21 @@
 <body>
     <main>
         <h1 class = "head">Weather Dashboard</h1>
+            <div>
             <div class="city-body col-md-3" id = "content-left">
               <label class="form-label" for="City">Search a City: </label><br><br>
               <input type="text" id="input" name="input"><br><br>
               <button type = "btn" class = "btn" id = "city-input">Search </button>
             </div>
+            <div class="row recent-searches  mt-3">
+                <div class="col-sm-12">
+                    <h2>Recent searches:</h2>
+                    <div class="row cityList m-0" id="search">
+
+                    <div>
+                </div>
+            </div>
+        </div>
             <div id = "Weather" class="col-md-6">
                 <div class="row ml-4 border border-dark rounded ">
                     <div class="col-sm-12" id="current-weather">
@@ -34,10 +44,10 @@
                     </div>
                 </div>
                 <!-- <div id = "current-date"></div> -->
-                <div id = "search"></div>
+                
             <div id = "container">
                 
-            <div id = "content-right" class = "card-list col-md-9 pt-4">
+            <div id = "content-right" class = "card-list col-md-12 pt-4">
                 <h2>5-day Forecast:</h2>
             <div class="row text-light">
             <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >

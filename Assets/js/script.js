@@ -23,7 +23,7 @@ var windEl2 = document.querySelector("#Wind1")
 var humidityEl2 = document.querySelector("#Humidity1")
 
 var tempEl3 = document.querySelector("#temp2")
-var windEl3 = document.querySelector("#Wind2")
+var windEl3 = document.getElementById('Wind2')
 var humidityEl3 = document.querySelector("#Humidity2")
 
 var tempEl4= document.querySelector("#temp3")
@@ -75,22 +75,33 @@ var searchCity = function(cityName) {
                         DayFourEl.textContent = dayFourForecast
                         var dayFiveForecast = moment.unix(data.daily[5].dt).format('MM/DD/YY');
                         DayFiveEl.textContent = dayFiveForecast
+                        indexEl.textContent = data.daily[0].uvi;
+
 
                         tempEl1.textContent =  "Temp: "  +  data.daily[1].temp.day
                         tempEl2.textContent =  "Temp: "  +  data.daily[2].temp.day
                         tempEl3.textContent =  "Temp: "  +  data.daily[3].temp.day
                         tempEl4.textContent =  "Temp: "  +  data.daily[4].temp.day
                         tempEl5.textContent =  "Temp: "  +  data.daily[5].temp.day
-
-                        windEl1.textContent = "Wind: " + data.daily[1].wind.speed
-                        console.log(windEl)
+                        
+                       
                         humidityEl1.textContent = "Humidity: " + data.daily[1].humidity
                         humidityEl2.textContent = "Humidity: " + data.daily[2].humidity
                         humidityEl3.textContent = "Humidity: " + data.daily[3].humidity
                         humidityEl4.textContent = "Humidity: " + data.daily[4].humidity
                         humidityEl5.textContent = "Humidity: " + data.daily[5].humidity
+
+                        windEl1.textContent = "Wind: " + data.daily[1].wind_speed
+                        windEl2.textContent = "Wind: " + data.daily[2].wind_speed
+                        windEl3.textContent = "Wind: " + data.daily[3].wind_speed
+                        windEl4.textContent = "Wind: " + data.daily[4].wind_speed
+                        windEl5.textContent = "Wind: " + data.daily[5].wind_speed
+
                         
-                        indexEl.textContent = data.daily[0].uvi;
+
+                        
+                        
+                        
                         
                     })
                 }
@@ -107,7 +118,7 @@ var searchCity = function(cityName) {
 
 startButtonEl.addEventListener("click", function() {
     var citySearch = document.querySelector("#input");
-    console.log(citySearch.value)
+   
     cities.push(citySearch.value)
   
     searchCity(citySearch.value)
@@ -122,9 +133,17 @@ var displayCities = function(saveSearchHistory) {
     var button = document.createElement("button")
     button.textContent = saveSearchHistory;
     console.log(button);
+    button.addEventListener("click", function(event){
+        //getting text
+        var clickedItem = event.target.textContent;
+        //calling weather function with new text
+        searchCity(clickedItem);
+    })
+    searchEl.appendChild(button);
+}
 
         
  
      
- }
+ 
 
