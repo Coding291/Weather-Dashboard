@@ -118,7 +118,6 @@ var searchCity = function(cityName) {
 
 startButtonEl.addEventListener("click", function() {
     var citySearch = document.querySelector("#input");
-   
     cities.push(citySearch.value)
   
     searchCity(citySearch.value)
@@ -128,15 +127,15 @@ startButtonEl.addEventListener("click", function() {
 })
 
 var displayCities = function(saveSearchHistory) {
-    searchEl = localStorage.getItem("FindCity")
-    localStorage.setItem("FindCity", JSON.stringify(cities) )
+    // searchEl = localStorage.getItem("FindCity")
+    // localStorage.setItem("FindCity", JSON.stringify(cities) )
     var button = document.createElement("button")
     button.textContent = saveSearchHistory;
     console.log(button);
     button.addEventListener("click", function(event){
-        //getting text
+        
         var clickedItem = event.target.textContent;
-        //calling weather function with new text
+        
         searchCity(clickedItem);
     })
     searchEl.appendChild(button);
